@@ -1,0 +1,7 @@
+{
+  "name": "gift_of_time",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -26,6 +26,7 @@ ion-card{
         ion-item{
             --padding-start: 0px;
             --inner-padding-end:0px;
+            --min-height: 30px;
             p{
                 padding: .2em .5em;
                 font-size: 12px;
@@ -49,7 +50,7 @@ ion-card{
         }
         .activity{
             border-top: 1px solid grey;
-            padding: .2em .5em;
+            padding: .2em 1em;
             ion-label{
                 font-size: 15px;
                 display: inline-block;

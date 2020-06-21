@@ -1,1 +1,19 @@
+ion-tab-bar{
+    height: 43px;
+    ion-tab-button{
+        --color-selected: #25a3c1;
+    }
+}
 
+ion-fab{
+    bottom: 0;
+    left: 48%;
+    ion-fab-button{
+        --background: #fff;
+        --color: #25a3c1;
+        --box-shadow: none;
+        ion-icon{
+            font-size: 40px;
+        }
+    }
+}

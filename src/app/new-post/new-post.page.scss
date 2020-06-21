@@ -1,0 +1,16 @@
+ion-toolbar{
+    ion-item{
+        ion-icon{
+            margin-inline-end: 0;
+            --color: #0d0d0d;
+            height: 25px;
+            width: 25px;
+            --border-radius: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        ion-title{
+            color: #ffffff;
+        }
+    }
+}

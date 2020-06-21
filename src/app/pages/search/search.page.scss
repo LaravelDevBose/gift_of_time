@@ -1,0 +1,35 @@
+ion-toolbar{
+    --background: #fff;
+    --min-height: 48px;
+    ion-item{
+        --background: #fff;
+        --padding-start: 0;
+        --min-height: 25px;
+
+        ion-searchbar{
+            --box-shadow: none;
+        }
+
+    }
+}
+
+ion-content{
+    ion-grid{
+        ion-row{
+            ion-col{
+                ion-list{
+                    background: #f5f5f5;
+                    ion-item{
+                        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+                        --padding-start: 2px;
+                        --inner-padding-end: 3px;
+                        margin: 0 5px 7px;
+                        ion-thumbnail{
+                            margin-inline-end: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

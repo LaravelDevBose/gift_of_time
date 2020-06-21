@@ -36,9 +36,11 @@ ion-content{
 ion-header{
     ion-toolbar{
         --background: #25a3c1;
+        --min-height: 48px;
         //--background: #3fb781;
         ion-item{
             --background: #25a3c1;
+            --min-height: 30px;
             ion-avatar{
                 width: 32px;
                 height: 32px;
@@ -46,29 +48,18 @@ ion-header{
                 margin-top: 0;
                 margin-bottom: 0;
             }
-            ion-searchbar{
-                padding-inline-start: 0;
-                padding-inline-end: 0;
-                padding-top: 0;
-                padding-bottom: 0;
+            ion-buttons{
+                margin-inline-end: 0;
+                --color: #0d0d0d;
+                ion-back-button{
+                    --ion-color-base: #000;
+                    height: 20px;
+                    width: 20px;
+                    --border-radius: 0;
+                }
             }
-            .searchbar-input-container{
-                .searchbar-input{
-                    padding-top: 3px;
-                    padding-bottom: 3px;
-                    font-size: 15px;
-                    font-weight: 400;
-                    line-height: 30px;
-                    padding-inline-start: 37px;
-                }
-                .searchbar-search-icon {
-                    left: 7px;
-                    top: 8px;
-                    width: 22px;
-                    height: 22px;
-                }
 
-            }
+
             ion-icon{
                 margin-inline-start: 0;
                 color: #ffffff;
@@ -76,5 +67,50 @@ ion-header{
                 width: 28px;
             }
         }
+
+    }
+}
+ion-searchbar{
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.searchbar-input-container{
+    .searchbar-input{
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 30px;
+        padding-inline-start: 37px;
+    }
+    .searchbar-search-icon {
+        left: 7px;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.searchPage{
+    .searchbar-input-container{
+        .searchbar-input{
+            padding-top: 3px;
+            padding-bottom: 3px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 30px;
+            padding-inline-start: 0;
+        }
+        .searchbar-search-icon {
+            left: 7px;
+            top: 8px;
+            width: 0px;
+            height: 0px;
+        }
+
     }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {ConfigService} from "../../providers/config.service";
+import {IonSearchbar} from "@ionic/angular";
 
 @Component({
   selector: 'app-search',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.page.scss'],
 })
 export class SearchPage implements OnInit {
+  @ViewChild('searchBar') searchbar : any;
+  constructor(
+      public config: ConfigService
+  ) {
 
-  constructor() { }
+  }
 
   ngOnInit() {
   }
 
+  ionViewDidEnter() {
+    this.searchbar.setFocus();
+  }
 }

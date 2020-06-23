@@ -1,0 +1,103 @@
+ion-toolbar{
+    --min-height: 42px;
+    ion-item{
+        --padding-start: 0;
+        --min-height: 25px;
+        --color: #fff;
+        ion-buttons{
+            ion-back-button{
+                --color: #fff;
+            }
+        }
+        ion-title{
+            --color: #fff;
+            padding-inline-start: 0px;
+            padding-inline-end: 0;
+        }
+
+        ion-icon{
+            color: #410dbd;
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+}
+
+
+
+ion-content{
+    .profile{
+        background: #fff;
+        margin-bottom: .5rem;
+        ion-row{
+            ion-col{
+                .cover-img{
+                    height: 8rem;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .avatar-img{
+                    height: 5rem;
+                    width: 5rem;
+                    border-radius: 50px;
+                    margin: 0 auto;
+                    position: absolute;
+                    top: -3rem;
+                    padding: 4px;
+                    left: 1rem;
+                    background: #25a3c1;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50px;
+                    }
+                }
+                ion-title{
+                    padding-top: 2.2rem;
+                    position: relative;
+                }
+                .edit-icon{
+                    font-size: 25px;
+                    float: right;
+                    padding-right: .7rem;
+                    padding-top: .2rem;
+                    color: #410dbd;
+                }
+                .summery{
+                    padding: .5rem;
+                    ion-chip{
+                        ion-icon{
+                            color: var(--theam-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .post{
+        background: #fff;
+        margin-bottom: .3rem;
+        padding: .5rem .7rem;
+        ion-col{
+            ion-label{
+                font-size: 18px;
+                font-weight: 600;
+            }
+            ion-item{
+                --padding-start: 0;
+                --min-height: 25px;
+                ion-avatar{
+                    margin-right: .5rem;
+                }
+                ion-label{
+                    font-size: 16px;
+                    color: grey;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}

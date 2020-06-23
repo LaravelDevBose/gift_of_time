@@ -1,9 +1,75 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
+    <ion-toolbar class="searchPage">
+        <ion-item lines="none">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/home" color="dark"></ion-back-button>
+            </ion-buttons>
+            <ion-title>User Name</ion-title>
+            <ion-icon name="settings-outline" mode="ios" slot="end" routerLink="/setting-menu" routerDirection="forward"></ion-icon>
+        </ion-item>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-grid class="ion-no-padding profile">
+        <ion-row>
+            <ion-col size="12" class="ion-no-padding">
+                <div class="cover-img">
+                    <img src="assets/img/post-bg.jpg" >
+                </div>
+            </ion-col>
+            <ion-col size="12" class="ion-no-padding">
+                <div class="avatar-img">
+                    <img src="assets/img/avatar.png">
+                </div>
+            </ion-col>
+            <ion-col size="12" class="ion-no-padding">
+                <ion-title>Arup Kumer Bose</ion-title>
+            </ion-col>
 
+            <ion-col size="12">
+                <div class="summery">
+                    <ion-chip>
+                        <ion-icon name="people-outline" mode="ios"></ion-icon>
+                        <ion-label>500+ Fiends</ion-label>
+                    </ion-chip>
+                    <ion-chip>
+                        <ion-icon name="newspaper-outline" mode="ios"></ion-icon>
+                        <ion-label>500 + Post</ion-label>
+                    </ion-chip>
+                    <ion-chip>
+                        <ion-icon name="heart" color="dark"></ion-icon>
+                        <ion-label>Default</ion-label>
+                    </ion-chip>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid class="ion-no-padding post">
+        <ion-row>
+            <ion-col size="12" class="ion-no-padding">
+                <ion-label>Posts</ion-label>
+            </ion-col>
+            <ion-col size="12" (click)="openPostModal()">
+                <ion-item>
+                    <ion-avatar slot="start">
+                        <img src="assets/img/avatar.png">
+                    </ion-avatar>
+                    <ion-label>What's on your mind ?</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid class="ion-no-padding">
+        <ion-row>
+            <ion-col size="12" class="ion-no-padding">
+                <app-post-component></app-post-component>
+                <app-post-component></app-post-component>
+                <app-post-component></app-post-component>
+                <app-post-component></app-post-component>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

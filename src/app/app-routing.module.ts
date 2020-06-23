@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'search',
     loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
   },
+  {
+    path: 'setting-menu',
+    loadChildren: () => import('./pages/setting-menu/setting-menu.module').then( m => m.SettingMenuPageModule)
+  },
 ];
 @NgModule({
   imports: [

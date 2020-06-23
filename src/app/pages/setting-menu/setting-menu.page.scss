@@ -1,0 +1,38 @@
+ion-toolbar{
+    --min-height: 42px;
+    ion-item{
+        --padding-start: 0;
+        --min-height: 25px;
+        --color: #fff;
+        ion-buttons{
+            ion-back-button{
+                --color: #fff;
+            }
+        }
+        ion-title{
+            --color: #fff;
+            padding-inline-start: 0px;
+            padding-inline-end: 0;
+        }
+    }
+}
+
+.ion-page {
+    --background: #fff!important;
+}
+
+ion-content{
+    --background: #fff!important;
+    ion-list{
+        ion-item{
+            --min-height: 50px!important;
+            ion-icon{
+                margin-inline-end: .7rem;
+
+            }
+            ion-label{
+
+            }
+        }
+    }
+}

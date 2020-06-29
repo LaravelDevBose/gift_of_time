@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "gift_of_time",
+  "appId": "com.gift_of_time.brainchildsoft",
+  "appName": "Gift of Time",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

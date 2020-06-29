@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'setting-menu',
     loadChildren: () => import('./pages/setting-menu/setting-menu.module').then( m => m.SettingMenuPageModule)
   },
+  {
+    path: 'profile-edit',
+    loadChildren: () => import('./pages/profile-edit/profile-edit.module').then( m => m.ProfileEditPageModule)
+  },
 ];
 @NgModule({
   imports: [

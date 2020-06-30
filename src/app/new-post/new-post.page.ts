@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ModalController} from "@ionic/angular";
+import {Component, OnInit} from '@angular/core';
+import {GlobalDataService} from "../providers/global_data.service";
 
 @Component({
     selector: 'app-new-post',
@@ -7,19 +7,16 @@ import {ModalController} from "@ionic/angular";
     styleUrls: ['./new-post.page.scss'],
 })
 export class NewPostPage implements OnInit {
-
+    customPopoverOptions: any = {
+        header: 'Select Privacy',
+        subHeader: 'Who can see your post ?',
+        mode:'ios',
+        interface:'popover'
+    };
     constructor(
-        private modalCtrl: ModalController
+        public globalData: GlobalDataService,
     ) { }
 
     ngOnInit() {
-    }
-
-    dismiss() {
-        // using the injected ModalController this page
-        // can "dismiss" itself and optionally pass back data
-        this.modalCtrl.dismiss({
-            'dismissed': true
-        });
     }
 }

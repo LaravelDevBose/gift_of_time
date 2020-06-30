@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'coming-soon',
     loadChildren: () => import('./pages/coming-soon/coming-soon.module').then( m => m.ComingSoonPageModule)
   },
+  {
+    path: 'new-post',
+    loadChildren: () => import('./new-post/new-post.module').then( m => m.NewPostPageModule)
+  },
 ];
 @NgModule({
   imports: [

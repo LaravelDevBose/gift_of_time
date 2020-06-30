@@ -12,8 +12,11 @@ ion-toolbar{
 
     }
 }
-
+.ion-page {
+    --background: #f5f5f5!important;
+}
 ion-content{
+    --background: #f5f5f5!important;
     ion-grid{
         ion-row{
             ion-col{

@@ -14,3 +14,64 @@ ion-toolbar{
         }
     }
 }
+.ion-page {
+    --background: #fff!important;
+}
+ion-content {
+    --background: #fff !important;
+    ion-grid{
+        padding: .5rem 0;
+        ion-row{
+            padding: 0;
+            ion-col{
+                padding: 0;
+                ion-item{
+                    //border-bottom: .001rem solid var(--theam-color);
+                    --padding-start: 10px;
+                    --inner-padding-end: 5px;
+                    ion-avatar{
+                        width: 36px;
+                        height: 36px;
+                        margin-right: .4rem;
+                    }
+                    ion-label{
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+                    ion-chip{
+                        padding-inline-start: 5px;
+                        padding-inline-end: 5px;
+                        padding-top: 2px;
+                        padding-bottom: 2px;
+                        --background: #ffffff;
+                        border: 0.1em solid #b7b7b7b8;
+                        height: 22px;
+                        border-radius: 5px;
+                        box-shadow: 0 0.125rem 0.3rem rgba(0, 0, 0, 0.15) !important;
+                        ion-icon{
+                            font-size: 14px;
+                            margin-inline-end: 2px;
+                        }
+                        ion-label{
+                            font-size: 12px;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                        }
+                        .arrow{
+                            margin: 0;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    ion-item{
+                        ion-textarea{
+                            --placeholder-font-weight: bold;
+                            --placeholder-color: var(--theam-color);
+                            //min-height: 25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

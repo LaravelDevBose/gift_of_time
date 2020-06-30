@@ -59,6 +59,7 @@ export class GlobalDataService {
         requests: ['push', 'email',],
         birthdays: ['push', 'sms'],
     }
+    public postPrivacy= 'public'
     constructor() {
     }
 

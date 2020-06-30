@@ -25,10 +25,6 @@ const routes: Routes = [
                 loadChildren: () => import('../friends/friends.module').then( m => m.FriendsPageModule)
             },
             {
-                path: 'new-post',
-                loadChildren: () => import('../new-post/new-post.module').then( m => m.NewPostPageModule)
-            },
-            {
                 path: '',
                 redirectTo: '/home',
                 pathMatch: 'full'

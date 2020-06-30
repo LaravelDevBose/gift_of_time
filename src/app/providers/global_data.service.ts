@@ -38,6 +38,10 @@ export class GlobalDataService {
     ];
 
     public userInfo = {
+        firstname: 'Arup Kumer',
+        lastname: 'Bose',
+        username: 'arup_bose',
+        email: 'arupkumerbose@gmail.com',
         name: 'Arup Kumer Bose',
         bio: 'Believe in yourself',
         birth_date: '1995-10-22',
@@ -46,6 +50,14 @@ export class GlobalDataService {
         education: 'Dhaka International University',
         gender: 'male',
         relationship: 'in_relationship',
+    }
+
+    public notification = {
+        comments: ['push',],
+        tags: ['push',],
+        reminders: ['push', 'sms'],
+        requests: ['push', 'email',],
+        birthdays: ['push', 'sms'],
     }
     constructor() {
     }

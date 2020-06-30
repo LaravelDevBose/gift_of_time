@@ -1,0 +1,147 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-item lines="none">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/home" color="dark"></ion-back-button>
+            </ion-buttons>
+            <ion-title>Notification Setting</ion-title>
+        </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="form-field">
+        <ion-row>
+            <ion-col size="12">
+                <ion-list lines="none">
+                    <ion-item (click)="openPopOver(comments)">
+                        <ion-icon name="chatbox-outline" ios="chatbox-outline" md="chatbox" slot="start"></ion-icon>
+                        <div>
+                            <ion-label>Comments :</ion-label>
+                            <small>
+                                <span
+                                        *ngFor="let bd of globalData.notification.comments; let i =index"
+                                >{{ bd }}{{ (i < globalData.notification.comments.length -1)? ',': '' }} </span>
+                            </small>
+                        </div>
+
+                        <ion-icon slot="end" name="ellipsis-vertical-outline" ios="ellipsis-vertical-outline" md="ellipsis-vertical"></ion-icon>
+                        <ion-select
+                            #comments
+                            [interfaceOptions]="customPopoverOptions"
+                            interface="popover"
+                            style="display: none"
+                            multiple="true"
+                            [(ngModel)]="globalData.notification.comments"
+                        >
+                            <ion-select-option value="push">Push</ion-select-option>
+                            <ion-select-option value="email">Email</ion-select-option>
+                            <ion-select-option value="sms">SMS</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item (click)="openPopOver(tags)">
+                        <ion-icon name="pricetag-outline" ios="pricetag-outline" md="pricetag" slot="start"></ion-icon>
+                        <div>
+                            <ion-label>Tags:</ion-label>
+                            <small>
+                                <span
+                                        *ngFor="let bd of globalData.notification.tags; let i =index"
+                                >{{ bd }}{{ (i < globalData.notification.tags.length -1)? ',': '' }} </span>
+                            </small>
+                        </div>
+
+                        <ion-icon slot="end" name="ellipsis-vertical-outline" ios="ellipsis-vertical-outline" md="ellipsis-vertical"></ion-icon>
+                        <ion-select
+                            #tags
+                            [interfaceOptions]="customPopoverOptions"
+                            interface="popover"
+                            style="display: none"
+                            multiple="true"
+                            [(ngModel)]="globalData.notification.tags"
+                        >
+                            <ion-select-option value="push">Push</ion-select-option>
+                            <ion-select-option value="email">Email</ion-select-option>
+                            <ion-select-option value="sms">SMS</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item (click)="openPopOver(reminders)">
+                        <ion-icon name="alarm-outline" md="alarm" ios="alarm-outline" slot="start"></ion-icon>
+                        <div>
+                            <ion-label>Reminders:</ion-label>
+                            <small>
+                                <span
+                                        *ngFor="let bd of globalData.notification.reminders; let i =index"
+                                >{{ bd }}{{ (i < globalData.notification.reminders.length -1)? ',': '' }} </span>
+                            </small>
+                        </div>
+
+                        <ion-icon slot="end" name="ellipsis-vertical-outline" ios="ellipsis-vertical-outline" md="ellipsis-vertical"></ion-icon>
+                        <ion-select
+                            #reminders
+                            [interfaceOptions]="customPopoverOptions"
+                            interface="popover"
+                            style="display: none"
+                            multiple="true"
+                            [(ngModel)]="globalData.notification.reminders"
+                        >
+                            <ion-select-option value="push">Push</ion-select-option>
+                            <ion-select-option value="email">Email</ion-select-option>
+                            <ion-select-option value="sms">SMS</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item (click)="openPopOver(friendRequest)">
+                        <ion-icon name="person-add-outline" ios="person-add-outline" md="person-add" slot="start"></ion-icon>
+                        <div>
+                            <ion-label>Friend Request:</ion-label>
+                            <small>
+                                <span
+                                        *ngFor="let bd of globalData.notification.requests; let i =index"
+                                >{{ bd }}{{ (i < globalData.notification.requests.length -1)? ',': '' }} </span>
+                            </small>
+                        </div>
+
+                        <ion-icon slot="end" name="ellipsis-vertical-outline" ios="ellipsis-vertical-outline" md="ellipsis-vertical"></ion-icon>
+                        <ion-select
+                            #friendRequest
+                            [interfaceOptions]="customPopoverOptions"
+                            interface="popover"
+                            style="display: none"
+                            multiple="true"
+                            [(ngModel)]="globalData.notification.requests"
+                        >
+                            <ion-select-option value="push">Push</ion-select-option>
+                            <ion-select-option value="email">Email</ion-select-option>
+                            <ion-select-option value="sms">SMS</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item (click)="openPopOver(birthday)">
+                        <ion-icon name="gift-outline" ios="gift-outline" md="gift" slot="start"></ion-icon>
+                        <div>
+                            <ion-label>Birthdays:</ion-label>
+                            <small>
+                                <span
+                                    *ngFor="let bd of globalData.notification.birthdays; let i =index"
+                                >{{ bd }}{{ (i < globalData.notification.birthdays.length -1)? ',': '' }} </span>
+                            </small>
+                        </div>
+                        <ion-icon slot="end" name="ellipsis-vertical-outline" ios="ellipsis-vertical-outline" md="ellipsis-vertical"></ion-icon>
+                        <ion-select
+                            #birthday
+                            [interfaceOptions]="customPopoverOptions"
+                            interface="popover"
+                            style="display: none"
+                            multiple="true"
+                            [(ngModel)]="globalData.notification.birthdays"
+                        >
+                            <ion-select-option value="push">Push</ion-select-option>
+                            <ion-select-option value="email">Email</ion-select-option>
+                            <ion-select-option value="sms">SMS</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

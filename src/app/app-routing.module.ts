@@ -18,6 +18,18 @@ const routes: Routes = [
     path: 'profile-edit',
     loadChildren: () => import('./pages/profile-edit/profile-edit.module').then( m => m.ProfileEditPageModule)
   },
+  {
+    path: 'account-setting',
+    loadChildren: () => import('./pages/account-setting/account-setting.module').then( m => m.AccountSettingPageModule)
+  },
+  {
+    path: 'notification-setting',
+    loadChildren: () => import('./pages/notification-setting/notification-setting.module').then( m => m.NotificationSettingPageModule)
+  },
+  {
+    path: 'coming-soon',
+    loadChildren: () => import('./pages/coming-soon/coming-soon.module').then( m => m.ComingSoonPageModule)
+  },
 ];
 @NgModule({
   imports: [

@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-item lines="none">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/home" color="dark"></ion-back-button>
+            </ion-buttons>
+            <ion-title>Account Setting</ion-title>
+        </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="form-field">
+        <ion-row >
+            <ion-col size="12">
+                <ion-list>
+                    <ion-item>
+                        <ion-label position="stacked">First Name :</ion-label>
+                        <ion-input
+                                [(ngModel)]="globalData.userInfo.firstname"
+                                type="text"
+                        ></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="stacked">Last Name :</ion-label>
+                        <ion-input
+                                [(ngModel)]="globalData.userInfo.lastname"
+                                type="text"
+                        ></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="stacked">User Name :</ion-label>
+                        <ion-input
+                                [(ngModel)]="globalData.userInfo.username"
+                                type="text"
+                        ></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="stacked">Primary Email :</ion-label>
+                        <ion-input
+                                [(ngModel)]="globalData.userInfo.email"
+                                type="email"
+                        ></ion-input>
+                    </ion-item>
+
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

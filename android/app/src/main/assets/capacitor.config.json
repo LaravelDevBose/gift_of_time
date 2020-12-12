@@ -1,0 +1,13 @@
+{
+  "appId": "com.gift_of_time.brainchildsoft",
+  "appName": "Gift of Time",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
